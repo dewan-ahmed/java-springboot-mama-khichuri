@@ -2,6 +2,20 @@
 
 This is a Spring Boot application for a fictional Bangladeshi restaurant named "Mama Khichuri". The application provides a basic set of RESTful API endpoints to Create, Read, Update, and Delete (CRUD) food items in the restaurant's menu. 
 
+## Design Pattern
+
+The design of this application can be described using a few design patterns:
+
+1. **Model-View-Controller (MVC)**: While we don't have a "View" in the traditional sense (as it's a REST API), the overall design still somewhat follows the MVC pattern. `FoodItem` serves as the Model, `FoodItemController` serves as the Controller, and the "View" would be how the client interprets and displays the data.
+
+2. **Repository Pattern**: The `FoodItemRepository` class embodies the Repository pattern. It's a layer of abstraction between the data access (database operations) and business logic layers of the application. This pattern makes the data access operations more testable and maintainable. 
+
+3. **Singleton Pattern**: The `SpringBootApplication` annotation in the `MamaKhichuriApplication` class ensures that the application context is a Singleton. In Spring, the application context is a shared resource where beans (like controllers, services, and repositories) are stored and managed. By default, Spring beans are singletons.
+
+4. **Dependency Injection (DI)**: While not a design pattern in the traditional sense, DI is a critical part of the design of Spring applications. It's not explicitly shown in your code, but Spring uses DI under the hood to manage and inject dependencies, such as repositories into controllers.
+
+It's worth noting that Spring Boot and similar frameworks often encapsulate and manage many of the details of these patterns, so they're not always immediately obvious in the code. The patterns are still there, however, providing structure and guiding the design of your application.
+
 ## API Endpoints
 
 The application defines the following RESTful endpoints:
