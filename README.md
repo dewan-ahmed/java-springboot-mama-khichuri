@@ -18,7 +18,7 @@ Welcome to the `mysql` branch of the Mama Khichuri Application. This branch cont
 
 ```bash
 git clone https://github.com/yourusername/mamakhichuri.git
-cd mamakhichuri
+cd java-springboot-mama-khichuri
 git checkout mysql
 ```
 
