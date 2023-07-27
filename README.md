@@ -13,7 +13,7 @@ The `h2` branch version of the Mama Khichuri Application uses Spring Boot, Jakar
 
 ## Application Properties
 
-To use H2 database and JPA, we need to specify the following properties in the `application.properties` file:
+To use H2 database and JPA, we need to specify the following properties in the `src/main/resources/application.properties` file:
 
 ```properties
 spring.datasource.url=jdbc:h2:mem:testdb
